@@ -1,1 +1,3 @@
-import './bootstrap';
+//import "./bootstrap";
+
+alert("Hello World!");
