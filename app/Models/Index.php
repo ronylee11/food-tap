@@ -11,7 +11,7 @@ class Index extends Model
 
     protected $fillables = ['title', 'description'];
 
-    public static function all() {
+    public static function listIndex() {
         return [
             [
             'title' => 'Hello World',
