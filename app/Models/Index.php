@@ -12,15 +12,17 @@ class Index extends Model
     protected $fillables = ['title', 'description'];
 
     public static function listIndex() {
-        return [
-            [
-            'title' => 'Hello World',
-            'description' => 'This is a description'
-            ],
-            [
-            'title' => 'Food Paradise',
-            'description' => 'cheap and affordable food!'
-            ]
-        ];
+        return Index::all();
+
+        //return [
+            //[
+            //'title' => 'Hello World',
+            //'description' => 'This is a description'
+            //],
+            //[
+            //'title' => 'Food Paradise',
+            //'description' => 'cheap and affordable food!'
+            //]
+        //];
     }
 }
