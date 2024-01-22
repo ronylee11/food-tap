@@ -12,4 +12,10 @@ class IndexController extends Controller
             'indexs' => Index::listIndex(),
         ]);
     }
+
+    public function show(Index $index) {
+        return view('index.show', [
+            'index' => $index,
+        ]);
+    }
 }
