@@ -18,4 +18,19 @@ class IndexController extends Controller
             'index' => $index,
         ]);
     }
+
+    public function edit(Index $index) {
+        return view('index.edit', [
+            'index' => $index,
+        ]);
+    }
+
+    public function update(Index $index) {
+        $index->update([
+            'title' => request('title'),
+            'body' => request('body'),
+        ]);
+
+        return redirect('/' . $index->id);
+    }
 }
