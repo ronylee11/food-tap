@@ -4,6 +4,9 @@
         <h1>ID: {{$index->id}}</h1>
         <h2>Title: {{$index->title}}</h2>
         <h3>Description: {{$index->description}}</h3>
+        <form action="/{{$index->id}}/edit" method="get">
+            <button type="submit" class="btn btn-secondary">Edit</button>
+        </form>
     </div>
 
 </x-layout>
