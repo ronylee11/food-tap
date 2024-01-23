@@ -16,4 +16,8 @@ use App\Http\Controllers\IndexController;
 
 Route::get('/', [IndexController::class, 'index']);
 
-Route::get('/{index}', [IndexController::class, 'show'])->where('id', '[0-9]+');
+Route::get('/{index}/edit', [IndexController::class, 'edit'])->where('index', '[0-9]+');
+
+Route::post('/{index}', [IndexController::class, 'update'])->where('index', '[0-9]+');
+
+Route::get('/{index}', [IndexController::class, 'show'])->where('index', '[0-9]+');
