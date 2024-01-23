@@ -9,7 +9,7 @@ class Index extends Model
 {
     use HasFactory;
 
-    protected $fillables = ['title', 'description'];
+    protected $fillable = ['id', 'title', 'description'];
 
     public static function listIndex() {
         return Index::all();
