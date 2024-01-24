@@ -3,13 +3,13 @@
         {{--<h1>Hello World!</h1>--}}
         {{--@dd ($indexs)--}}
         @foreach ($indexs as $index)
-        <div class="border m-2">
+        <x-card>
             <form action="/{{$index['id']}}">
                 <h1>{{ $index['title'] }}</h1>
                 <h2>{{ $index['description'] }}</h1>
-                    <button type="submit" class="btn btn-primary">Read More</button>
+                    <button type="submit" class="btn btn-secondary">Read More</button>
             </form>
-        </div>
+        </x-card>
         @endforeach
     </div>
 
