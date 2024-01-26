@@ -13,8 +13,8 @@
             <input type="text" id="description" name="description" value="{{$index->description}}">
             <br />
 
-            <a href="/{{$index->id}}" class="btn btn-secondary">Back</a>
-            <button type="submit" class="btn btn-danger">Edit</button>
+            <a href="/{{$index->id}}" class="btn btn-success">Back</a>
+            <button type="submit" class="btn btn-warning">Edit</button>
         </form>
 
     </div>
