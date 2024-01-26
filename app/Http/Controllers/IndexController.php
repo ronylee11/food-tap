@@ -27,6 +27,7 @@ class IndexController extends Controller
 
     public function update(Index $index) {
         $index->update([
+            'id' => request('id'),
             'title' => request('title'),
             'body' => request('body'),
         ]);
