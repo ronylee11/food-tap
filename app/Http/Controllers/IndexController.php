@@ -34,4 +34,10 @@ class IndexController extends Controller
 
         return redirect('/' . $index->id);
     }
+
+    public function destroy(Index $index) {
+        $index->delete();
+
+        return redirect('/');
+    }
 }

@@ -1,13 +1,20 @@
 <x-layout>
 
     <div class="container bg-primary p-5 border border-primary-subtle rounded">
-        <form action="/{{$index->id}}/edit" method="get">
-            <h1>ID: {{$index->id}}</h1>
-            <h2>Title: {{$index->title}}</h2>
-            <h3>Description: {{$index->description}}</h3>
-            <a class="btn btn-success" href="/">Back</a>
-            <button type="submit" class="btn btn-secondary">Edit</button>
-        </form>
+        @csrf
+        <h1>ID: {{$index->id}}</h1>
+        <h2>Title: {{$index->title}}</h2>
+        <h3>Description: {{$index->description}}</h3>
+
+        <div class="d-flex">
+            <a class="btn btn-success m-2" href="/">Back</a>
+            <a class="btn btn-secondary m-2" href="/{{$index->id}}/edit">Edit</a>
+            <form action="/{{$index->id}}" method="post">
+                @csrf
+                @method('delete')
+                <button type="submit" class="btn btn-danger m-2">Delete</button>
+            </form>
+        </div>
     </div>
 
 </x-layout>
