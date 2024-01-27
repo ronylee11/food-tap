@@ -26,3 +26,4 @@ Route::get('/{index}', [IndexController::class, 'show'])->where('index', '[0-9]+
 
 Route::get('/new', [IndexController::class, 'new']);
 
+Route::post('/', [IndexController::class, 'store']);

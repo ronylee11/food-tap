@@ -45,4 +45,13 @@ class IndexController extends Controller
         return view('index.new');
     }
 
+    public function store() {
+        $index = Index::create([
+            'id' => request('id'),
+            'title' => request('title'),
+            'description' => request('description'),
+        ]);
+
+        return redirect('/' . $index->id);
+    }
 }
