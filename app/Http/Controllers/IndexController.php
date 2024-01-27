@@ -40,4 +40,9 @@ class IndexController extends Controller
 
         return redirect('/');
     }
+
+    public function new() {
+        return view('index.new');
+    }
+
 }
