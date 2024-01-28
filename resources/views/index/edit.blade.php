@@ -1,6 +1,6 @@
 <x-layout>
 
-    <div class="container bg-primary p-5 border border-primary-subtle rounded">
+    <div class="container bg-white p-5 border border-primary-subtle rounded">
         <form method="POST" action="/{{$index->id}}" enctype="multipart/form-data">
             @csrf
             <label for="id" class="fs-2">ID: </label>
