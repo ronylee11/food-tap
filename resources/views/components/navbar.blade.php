@@ -1,4 +1,4 @@
-<div class="vw-100 m-2">
+<div class="vw-100 mb-2">
     <nav class="navbar navbar-expand-lg bg-dark-subtle">
         <div class="container-fluid">
             <a class="navbar-brand fs-1" href="">FoodTap</a>
