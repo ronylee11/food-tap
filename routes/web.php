@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\IndexController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,3 +28,5 @@ Route::get('/{index}', [IndexController::class, 'show'])->where('index', '[0-9]+
 Route::get('/new', [IndexController::class, 'new']);
 
 Route::post('/', [IndexController::class, 'store']);
+
+Route::get('/register', [UserController::class, 'register']);
