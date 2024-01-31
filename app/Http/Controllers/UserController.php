@@ -7,10 +7,12 @@ use App\Models\User;
 
 class UserController extends Controller
 {
+    // show register form
     public function register() {
         return view('users.register');
     }
 
+    // register new user
     public function store() {
         // Validate
         $validated = request()->validate([
@@ -26,6 +28,38 @@ class UserController extends Controller
 
         // Log in new user
         auth()->login($user);
+
+        return redirect('/');
+    }
+
+    // show login form
+    public function login() {
+        return view('users.login');
+    }
+
+    // login user
+    public function authenticate() {
+        // Validate
+        $validated = request()->validate([
+            'name' => ['required', 'min:3'],
+            'password' => 'required|min:3'
+        ]);
+
+        // Attempt login
+        if (auth()->attempt($validated)) {
+            return redirect('/')->with('message', 'Login Success!');
+        } else {
+            return back()->withErrors([
+                'name' => 'The provided credentials do not match our records.',
+            ]);
+        }
+
+        return redirect('/');
+    }
+
+    // logout user
+    public function logout() {
+        auth()->logout();
 
         return redirect('/');
     }
