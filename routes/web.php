@@ -30,3 +30,5 @@ Route::get('/new', [IndexController::class, 'new']);
 Route::post('/', [IndexController::class, 'store']);
 
 Route::get('/register', [UserController::class, 'register']);
+
+Route::post('/register', [UserController::class, 'store']);
