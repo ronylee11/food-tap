@@ -29,7 +29,7 @@ class UserController extends Controller
         // Log in new user
         auth()->login($user);
 
-        return redirect('/');
+        return redirect('/')->with('message', 'Register and Log in Success!');
     }
 
     // show login form
@@ -54,13 +54,13 @@ class UserController extends Controller
             ]);
         }
 
-        return redirect('/');
+        return redirect('/')->with('message', 'Login Success!');
     }
 
     // logout user
     public function logout() {
         auth()->logout();
 
-        return redirect('/');
+        return redirect('/')->with('message', 'Logout Success!');
     }
 }
