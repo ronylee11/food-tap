@@ -13,7 +13,7 @@
             <input type="text" id="description" name="description" value="">
             <br />
 
-            <a href="" class="btn btn-success">Back</a>
+            <a href="/" class="btn btn-success">Back</a>
             <button type="submit" class="btn btn-warning">Create</button>
         </form>
 
