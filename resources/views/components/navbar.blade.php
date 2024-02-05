@@ -20,7 +20,7 @@
                         <button type="submit" class="nav-link" href="/logout">Logout</button>
                     </form>
                     @endunless
-                    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                    <a class="nav-link" href="/new">New</a>
                 </div>
             </div>
 
