@@ -12,7 +12,7 @@ class Index extends Model
     protected $fillable = ['id', 'title', 'description'];
 
     public static function listIndex() {
-        return Index::all();
+        return Index::where();
 
         //return [
             //[

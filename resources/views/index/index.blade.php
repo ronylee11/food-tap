@@ -17,8 +17,8 @@
             </form>
         </x-card>
         @endforeach
-        <div class="d-flex align-items-center justify-content-end">
-            <a class="btn btn-warning" href="/new">New</a>
+        <div class="mt-6 p-4">
+            {{ $indexs->links('pagination::bootstrap-5') }}
         </div>
     </div>
 

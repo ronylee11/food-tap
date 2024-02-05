@@ -9,7 +9,7 @@ class IndexController extends Controller
 {
     public function index() {
         return view('index.index', [
-            'indexs' => Index::listIndex(),
+            'indexs' => Index::latest()->paginate(3),
         ]);
     }
 
