@@ -5,6 +5,8 @@
         <h2 class="fs-2">FoodTap is a food blog that provides you with the best recipes from around the world.</h2>
     </div>
 
+    @include('partials._search')
+
     <div class="container bg-white p-5 border border-primary-subtle rounded">
         {{--<h1>Hello World!</h1>--}}
         {{--@dd ($indexs)--}}
