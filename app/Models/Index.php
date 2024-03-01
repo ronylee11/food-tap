@@ -9,21 +9,10 @@ class Index extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['id', 'title', 'description'];
+    protected $fillable = ['title', 'description'];
 
     public static function listIndex() {
-        return Index::where();
-
-        //return [
-            //[
-            //'title' => 'Hello World',
-            //'description' => 'This is a description'
-            //],
-            //[
-            //'title' => 'Food Paradise',
-            //'description' => 'cheap and affordable food!'
-            //]
-        //];
+        return Index::latest()->filter(request(['title', 'search']))->paginate(3);
     }
 
     public static function scopeFilter($query, array $filters) {
