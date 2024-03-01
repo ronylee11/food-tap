@@ -3,9 +3,6 @@
     <div class="container bg-primary p-5 border border-primary-subtle rounded">
         <form method="POST" action="/" enctype="multipart/form-data">
             @csrf
-            <label for="id" class="fs-2">ID: </label>
-            <input type="text" id="id" name="id" value="">
-            <br />
             <label for="title" class="fs-2">Title: </label>
             <input type="text" id="title" name="title" value="">
             <br />
